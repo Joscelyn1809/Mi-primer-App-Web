@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+const sequelize = require('../database/connection');
 
 module.exports = sequelize.define("Inventario", {
   id: {
@@ -29,7 +30,7 @@ module.exports = sequelize.define("Inventario", {
   },
 
   estado: {
-    type: Sequelize.ENUM(A, P, E),
+    type: Sequelize.ENUM("A", "P", "E"),
     allowNULL: false,
   },
 });

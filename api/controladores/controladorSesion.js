@@ -2,7 +2,7 @@ const express = require("express");
 const Cliente = require("../src/models/Cliente");
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET = "a2Xp3WuYHqM5EltLt2slFtT5BnsTGqZ4";
+PASSPORT_KEY = "QWEOIUASDLKJMNBZXC012938";
 
 const postLogin = async (req, res) => {
   const { email, password } = req.body;
@@ -17,7 +17,7 @@ const postLogin = async (req, res) => {
 
   const jwtToken = jwt.sign(
     { id: cliente.id, email: cliente.email },
-    JWT_SECRET
+    PASSPORT_KEY
   );
 
   res.send({ exito: true, token: jwtToken, cliente: cliente });

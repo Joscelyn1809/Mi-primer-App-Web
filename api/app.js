@@ -4,8 +4,8 @@ const https = require("https");
 const cors = require("cors");
 const passport = require("passport");
 
-require("dotenv").config();
 require("./passport");
+require('dotenv').config();
 
 const bodyParser = require("body-parser");
 const app = express();
@@ -13,7 +13,6 @@ const puerto = 4000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use;
 
 https
   .createServer(
@@ -26,7 +25,6 @@ https
   )
   .listen(puerto, () => {
     console.log("Servidor corriendo en puerto", puerto);
-    console.log(process.env.JWT_SECRET);
   });
 
 require("./src/database/connection");
@@ -48,24 +46,24 @@ app.use(
   productosRouter
 );
 app.use(
-  "./ventas",
+  "/ventas",
   passport.authenticate("jwt", { session: false }),
   ventasRouter
 );
 app.use(
-  "./carrito",
+  "/carrito",
   passport.authenticate("jwt", { session: false }),
   carritoRouter
 );
 app.use(
-  "./inventario",
+  "/inventario",
   passport.authenticate("jwt", { session: false }),
   inventarioRouter
 );
 app.use(
-  "./reportes",
+  "/reportes",
   passport.authenticate("jwt", { session: false }),
-  reportes.router
+  reportesRouter
 );
 
 app.get("/", function (req, res) {
