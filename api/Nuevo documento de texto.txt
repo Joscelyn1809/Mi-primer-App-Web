@@ -1,0 +1,70 @@
+Los modelos segun el profe guardan listas de cada cosa, entonces no son la clase.
+
+Como se supone que se modifican los archivos cuando agregas un cliente o un producto cuando usas los CRUD?
+
+entonces que va en el archivo app?
+
+Donde creas el objeto de cada uno?
+
+
+
+{
+  "rfc": "4567",
+  "nombre": "Shoto Todoroki",
+  "email": "shoto2.0@gmail.com"
+}
+
+{
+  "rfc": "1234",
+  "nombre": "Katsuki Bakugo",
+  "email": "dynamight@gmail.com"
+}
+
+
+{
+  "rfc": "4567",
+  "rfcNuevo": "1234",
+  "nombreNuevo": "Shoto",
+  "emailNuevo": "shoto@gmail.com"
+}
+
+
+
+{
+  "id": "12",
+  "sku": "1234",
+  "descripcion": "CocaCola",
+  "unidad": "10",
+  "costo": "15",
+  "precio": "18"
+}
+
+{
+  "id": "15",
+  "sku": "45675",
+  "descripcion": "Sprite",
+  "unidad": "20",
+  "costo": "13",
+  "precio": "16"
+}
+
+
+{
+  "idNuevo": "54",
+  "sku": "1234",
+  "skuNuevo": "375",
+  "descripcionNuevo": "Coca-Cola",
+  "unidadNuevo": "35",
+  "costoNuevo": "15",
+  "precioNuevo": "18"
+}
+
+{
+  "idNuevo": "54",
+  "sku": "45675",
+  "skuNuevo": "375",
+  "descripcionNuevo": "Squirt",
+  "unidadNuevo": "25",
+  "costoNuevo": "15",
+  "precioNuevo": "18"
+}
